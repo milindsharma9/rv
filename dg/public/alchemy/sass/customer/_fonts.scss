@@ -1,0 +1,55 @@
+/*==== Zona Pro Font Import ===*/
+
+@font-face {
+  font-family: 'Zona Pro';
+  font-weight:300;
+  src: url('../../fonts/ZonaPro-Thin.eot');
+  src: url('../../fonts/ZonaPro-Thin.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/ZonaPro-Thin.woff') format('woff'),
+       url('../../fonts/ZonaPro-Thin.ttf')  format('truetype'),
+       url('../../fonts/ZonaPro-Thin.svg#svgFontName') format('svg');
+  unicode-range: U+00-FF;
+}
+
+@font-face {
+  font-family: 'Zona Pro';
+  font-weight:normal;
+  src: url('../../fonts/ZonaPro-Bold.eot');
+  src: url('../../fonts/ZonaPro-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/ZonaPro-Bold.woff') format('woff'),
+       url('../../fonts/ZonaPro-Bold.ttf')  format('truetype'),
+       url('../../fonts/ZonaPro-Bold.svg#ZonaPro-Bold') format('svg');
+  unicode-range: U+00-FF;
+}
+
+/*==== Neutraface Text Font Import ===*/
+
+@font-face {
+  font-family: 'Neutraface Text';
+  font-weight:normal;
+  src: url('../../fonts/NeutraText-BookAlt.eot');
+  src: url('../../fonts/NeutraText-BookAlt.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/NeutraText-BookAlt.woff') format('woff'),
+       url('../../fonts/NeutraText-BookAlt.ttf')  format('truetype');
+  unicode-range: U+00-FF;
+}
+
+@font-face {
+  font-family: 'Neutraface Text';
+  font-weight:300;
+  src: url('../../fonts/NeutraText-Light.eot');
+  src: url('../../fonts/NeutraText-Light.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/NeutraText-Light.woff') format('woff'),
+       url('../../fonts/NeutraText-Light.ttf')  format('truetype');
+  unicode-range: U+00-FF;
+}
+
+@font-face {
+  font-family: 'Neutraface Text';
+  font-weight:500;
+  src: url('../../fonts/NeutraText-Demi.eot');
+  src: url('../../fonts/NeutraText-Demi.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/NeutraText-Demi.woff') format('woff'),
+       url('../../fonts/NeutraText-Demi.ttf')  format('truetype');
+  unicode-range: U+00-FF;
+}

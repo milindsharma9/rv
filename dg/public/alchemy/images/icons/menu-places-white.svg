@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 27 22" style="enable-background:new 0 0 27 22;" xml:space="preserve">
+<style type="text/css">
+	.Drop_x0020_Shadow{fill:none;}
+	.Round_x0020_Corners_x0020_2_x0020_pt{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.Live_x0020_Reflect_x0020_X{fill:none;}
+	.Bevel_x0020_Soft{fill:url(#SVGID_1_);}
+	.Dusk{fill:#FFFFFF;}
+	.Foliage_GS{fill:#FFDD00;}
+	.Pompadour_GS{fill-rule:evenodd;clip-rule:evenodd;fill:#44ADE2;}
+	.st0{fill:#FFFFFF;}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0.7071" y2="0.7071">
+	<stop  offset="0" style="stop-color:#DEDFE3"/>
+	<stop  offset="0.1738" style="stop-color:#D8D9DD"/>
+	<stop  offset="0.352" style="stop-color:#C9CACD"/>
+	<stop  offset="0.5323" style="stop-color:#B4B5B8"/>
+	<stop  offset="0.7139" style="stop-color:#989A9C"/>
+	<stop  offset="0.8949" style="stop-color:#797C7E"/>
+	<stop  offset="1" style="stop-color:#656B6C"/>
+</linearGradient>
+<g id="XMLID_2_">
+	<path id="XMLID_6_" class="st0" d="M15.072,17.287l0.021,0.006l4.948,1.484l0.015,0.026c0.715,1.26,1.347,2.268,1.524,2.546
+		c0.093,0.145,0.25,0.231,0.422,0.231c0.172,0,0.33-0.086,0.422-0.231c0.429-0.675,4.189-6.663,4.189-9.011
+		c0-2.324-1.739-4.29-4.046-4.574l-0.066-0.008V3.273c0-0.223-0.143-0.415-0.356-0.479l-6.93-2.079
+		c-0.014-0.001-0.022-0.003-0.031-0.005c-0.016-0.003-0.035-0.007-0.055-0.009c-0.041-0.006-0.076-0.006-0.113,0
+		c-0.021,0.002-0.041,0.006-0.06,0.01l-0.021,0.003L8.142,2.751L8.12,2.745L1.356,0.715C1.205,0.67,1.04,0.7,0.914,0.793
+		C0.788,0.887,0.713,1.037,0.713,1.194v15.571c0,0.223,0.143,0.415,0.356,0.479l6.929,2.079c0.112,0.028,0.184,0.027,0.277,0.001
+		l0.021-0.003L15.072,17.287z M25.613,12.338c0,1.758-2.956,6.715-3.548,7.691l-0.064,0.105l-0.064-0.105
+		c-0.255-0.42-0.654-1.09-1.106-1.894l-0.01-0.018c-1.113-1.985-2.432-4.589-2.432-5.779c0-1.992,1.62-3.613,3.612-3.613
+		S25.613,10.346,25.613,12.338z M15.571,1.866l5.93,1.779v4.113l-0.066,0.008c-2.307,0.284-4.046,2.25-4.046,4.573
+		c0,0.954,0.651,2.694,1.882,5.031l0.083,0.158l-3.783-1.135V1.866z M8.641,3.644l5.931-1.779v14.527l-5.931,1.779V3.644z
+		 M7.642,18.172l-5.93-1.779V1.866l5.93,1.779V18.172z"/>
+	<path id="XMLID_3_" class="st0" d="M22.001,9.703c-1.452,0-2.634,1.182-2.634,2.634s1.182,2.633,2.634,2.633
+		c1.452,0,2.634-1.181,2.634-2.633S23.453,9.703,22.001,9.703z M22.001,13.971c-0.901,0-1.635-0.733-1.635-1.635
+		s0.733-1.635,1.635-1.635s1.635,0.733,1.635,1.635S22.902,13.971,22.001,13.971z"/>
+</g>
+</svg>

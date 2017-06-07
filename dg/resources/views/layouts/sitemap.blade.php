@@ -1,0 +1,5 @@
+@include('partials.head-section')
+@include('partials.top-header-section')
+@include('partials.logo-navigation-section')
+@yield('content')
+@include('partials.footer-wide-layout')

@@ -1,0 +1,3502 @@
+/*==== Button style =====*/
+.btn-black {
+	background:#1C1C1C;
+	color:#FFF;
+	border:none;
+	@include border-radius(3px);
+	display: inline-block;
+	padding: 5px 10px;
+	line-height: 1.2;
+	font-family: 'Neutraface Text';
+	font-size: 12px;
+	letter-spacing: 0;
+	text-transform:none;
+	text-decoration:none;
+	@include transition(0.25s ease all);
+	margin-bottom:6px;
+	vertical-align:middle;
+
+	&:hover {
+		background:#FF6C61;
+		color:#FFF;
+		@include transition(0.25s ease all);
+	}
+}
+
+.btn-red {
+	@extend .btn-black;
+	background:#FF6C61;
+
+	&:hover {
+		background:#1C1C1C;
+	}
+}
+
+/*==== Store Profile Page Style ====*/
+
+.store-template {
+
+	.siteHeader {
+
+		font-size:0.75rem;
+		border-bottom: solid 4px #EFEFEF;
+		@include box-shadow(none);
+
+		.logo {
+			a{
+				&:after{
+					content:none;
+				}
+			}
+		}
+	}
+
+	&.store-dashboard-template {
+		.siteHeader {
+			font-size:1rem;
+			border-bottom: none;
+			@include box-shadow(none);
+		}
+
+		.logo {
+			a{
+				display:block !important;
+
+				&:before{
+					content:none;
+				}
+			}
+		}
+	}
+
+	.mobile-trigger {
+		height:39px;
+		background-color: transparent;
+	}
+
+	.store-content-section {
+		min-height: -webkit-calc(100vh - 78px);
+		min-height: calc(100vh - 78px);
+	}
+
+	.store-description {
+
+		padding-bottom:15px;
+		border-bottom: solid 4px #EFEFEF;
+
+		& + .container {
+			padding:0;
+		}
+
+		img {
+			display:none;
+		}
+
+		.bg-store-banner-image {
+			min-height:140px;
+			background-size:cover;
+			background-position:center center;
+			background-repeat:no-repeat;
+			position:absolute;
+			top:0;
+			width:100%;
+			left:0;
+			z-index:0;
+
+			&:before {
+				content:"";
+				width:100%;
+				height:100%;
+				top:0;
+				left:0;
+				background:rgba(0,0,0,0.3);
+				position:absolute;
+				display:block;
+			}
+		}
+
+		.store-desc {
+			text-align:center;
+			position:relative;
+
+			.bg-store-image {
+				width:140px;
+				height:140px;
+				background-size:cover;
+				background-position:center center;
+				background-repeat:no-repeat;
+				@include border-radius(50%);
+				margin:15px auto 0;
+			}
+
+			.store-name {
+				margin:0;
+				font-size:12px;
+				text-transform:uppercase;
+				letter-spacing:0.2em;
+				font-family:"Zona Pro";
+				margin-top:7px;
+			}
+
+			.action-pic-upload {
+				width:28px;
+				height:24px;
+				float:right;
+				background:url(../../images/camera-icon.svg) no-repeat center center;
+				background-size:100%;
+				border:none;
+				cursor:pointer;
+				overflow:hidden;
+
+				input{
+					opacity:0;
+					cursor:pointer;
+					min-height: 1px;
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+/*====== Store Product Page ====*/
+
+ul.nav-tabs{
+	display:table;
+	width:100%;
+	border:none;
+	border-top: solid 4px #E5E5E5;
+	margin-top: -4px;
+	table-layout:fixed;
+
+	&:after,
+	&:before {
+		content:none;
+	}
+
+	li{
+		display:table-cell;
+		float: none;
+		margin: 0;
+		vertical-align:middle;
+
+		a{
+			border:none;
+			margin:0;
+			background:transparent;
+			padding:10px;
+			text-align:center;
+			background-color:#E5E5E5;
+			@include border-radius(0);
+			font-size: 14px;
+			color: rgba(29, 29, 27,0.4);
+
+			span {
+				display:inline-block;
+				position:relative;
+				&:after {
+					display:block;
+					width:100%;
+					height:3px;
+					background-color:#FF6C61;
+					position:absolute;
+				}
+			}
+		}
+
+		&.active {
+			background: #F4F4F4;
+
+			a,a:hover,a:focus{
+				border:none;
+				color:#1D1D1B;
+				background-color:#F4F4F4;
+			}
+
+			span {
+				&:after{
+					content:"";
+				}
+			}
+		}
+	}
+
+	&.tab-level-1 {
+		background: #E5E5E5;
+    	vertical-align: middle;
+
+    	&.active {
+			background: #F4F4F4;
+		}
+	}
+
+	&.tab-level-2 {
+
+		background-color:#F4F4F4;
+		padding-top:5px;
+
+		a{
+			background-color:#F4F4F4;
+		}
+
+		li {
+			vertical-align:middle;
+			&.active {
+				background-color:#FFF;
+				a {
+					background-color:#FFF;
+				}
+			}
+		}
+	}
+}
+
+.store-product-section {
+
+	min-height:-webkit-calc(100vh - 78px);
+	min-height:calc(100vh - 78px);
+	position:relative;
+
+	.disable-product-upload-div {
+		background:#FFF;
+		padding:15px;
+
+		h3 {
+			margin-top:0;
+		}
+	}
+
+	ul.product-group {
+		padding:0;
+		margin:0;
+		list-style:none;
+
+		& > li{
+
+			border-bottom:solid 4px #EFEFEF;
+
+			& > a{
+				padding:20px 35px 20px 20px;
+				font-size:12px;
+				line-height:1;
+				display:block;
+				position:relative;
+				cursor:pointer;
+
+				&:after,
+				&:before{
+					content:"";
+					clear:both;
+					display:block;
+				}
+
+				span {
+					&.product-group-name {
+						float:left;
+						font-family: "Zona Pro";
+						text-transform: uppercase;
+						letter-spacing: 0.2em;
+					}
+
+					&.product-group-availability {
+						float: right;
+						font-size: 14px;
+						letter-spacing: 0.05em;
+						line-height: 1;
+					}
+				}
+			}
+
+			& > a{
+				&:before {
+					padding: 0;
+				    width: 10px;
+				    height:10px;
+				    display: inline-block;
+				    padding: 0;
+				    background:url(../../images/child-trigger.png) no-repeat center center;
+				    vertical-align:middle;
+				    content:"";
+				    position:absolute;
+				    right:15px;
+				    top:50%;
+				    margin-top:-5px;
+				    @include transform(rotate(90deg));
+				    @include transition(0.25s ease all);
+				}
+			}
+
+			&.category-open > a{
+				&:before{
+					@include transform(rotate(-90deg));
+					@include transition(0.25s ease all);
+				}
+			}
+		}
+
+		ul {
+			padding:0;
+			margin:0;
+			list-style:none;
+			display:none;
+
+			li {
+				padding:15px;
+				border-top:solid 1px #E5E5E5;
+				display: -ms-flex;
+				display: -webkit-flex;
+				display: flex;
+				align-items: center;
+
+				&:after,
+				&:before{
+					content:"";
+					clear:both;
+					display:block;
+				}
+
+				& > * {
+					display:inline-block;
+					vertical-align:middle;
+				}
+
+				span.product-available {
+					width:23px;
+					height:23px;
+					margin-right:15px;
+					position:relative;
+
+					.marker {
+						background:url(../../images/check-mark-icon.svg) no-repeat center center #2D2D2D;
+						background-size: 16px;
+						@include border-radius(5px);
+						position:absolute;
+						top:0;
+						left:0;
+						width:100%;
+						height:100%;
+						opacity:0.2;
+
+						&.loading {
+						    background-image: url(../../images/loadingstock.gif);
+						    background-color: transparent;
+						}
+
+						&.active {
+						    opacity: 1;
+						}
+
+						&.checked {
+							opacity:1;
+						}
+					}
+
+					input[type="checkbox"]{
+						position:absolute;
+						top:0;
+						left:0;
+						width:100%;
+						height:100%;
+						z-index:2;
+						margin:0;
+						opacity:0;
+					}
+
+					input[type="checkbox"]:checked + .marker {
+						opacity:1;
+					}
+				}
+
+				.product-image,
+				.product-img {
+				    width: 23%;
+				    text-align: center;
+				    margin-right:5px;
+				    
+				    img {
+				    	max-height:75px;
+				    }
+				    a{
+						padding:0;
+					}
+				}
+
+				.product-info {
+				    width: calc(86% - 150px);
+				    width: -webkit-calc(86% - 150px);
+
+				    & > a:not(.product-price):hover {
+				    	text-decoration:underline;
+				    }
+
+				    .product-name {
+					    margin: 0;
+					    font-size: 16px;
+					    line-height: 1;
+					    font-weight:normal;
+					}
+
+					.product-quantity {
+					    margin: 0;
+					    line-height: 1.2;
+					    font-size: 12px;
+					    color: #686868;
+					}
+
+					.product-description {
+						margin: 0;
+					    line-height: 1.2;
+					    font-size: 12px;
+					    color: #686868;
+					}
+
+					.product-price {
+					    margin: 0;
+					    font-size: 16px;
+					    text-decoration:none;
+					}
+				}
+
+				a.product-description-link {
+				    padding: 0;
+				    width: 75px;
+				    display: inline-block;
+				    padding: 0;
+					font-size: 12px;
+					line-height: 1;
+					text-align: right;
+					color:#8e8e8d;
+
+					span {
+						font-size:13px;
+						color:#212121;
+						margin-left:5px;
+					}
+				}
+			}
+		}
+	}
+
+	ul.product_list {
+		padding:0;
+		margin:0;
+		list-style:none;
+
+		li {
+			padding:15px;
+			border-bottom:solid 1px #E5E5E5;
+			display: -ms-flex;
+			display: -webkit-flex;
+			display: flex;
+			align-items: center;
+
+			&:after,
+			&:before{
+				content:"";
+				clear:both;
+				display:block;
+			}
+
+			& > * {
+				display:inline-block;
+				vertical-align:middle;
+			}
+
+			span.product-available {
+				width:23px;
+				height:23px;
+				margin-right:15px;
+				position:relative;
+
+				.marker {
+					background:url(../../images/check-mark-icon.svg) no-repeat center center #2D2D2D;
+					background-size: 16px;
+					@include border-radius(5px);
+					position:absolute;
+					top:0;
+					left:0;
+					width:100%;
+					height:100%;
+					opacity:0.2;
+
+					&.loading {
+					    background-image: url(../../images/loadingstock.gif);
+					    background-color: transparent;
+					}
+
+					&.active {
+					    opacity: 1;
+					}
+
+					&.checked {
+						opacity:1;
+					}
+				}
+
+				input[type="checkbox"]{
+					position:absolute;
+					top:0;
+					left:0;
+					width:100%;
+					height:100%;
+					z-index:2;
+					margin:0;
+					opacity:0;
+				}
+
+				input[type="checkbox"]:checked + .marker {
+					opacity:1;
+				}
+			}
+
+			.product-image,
+			.product-img {
+			    width: 23%;
+			    text-align: center;
+			    margin-right:5px;
+			    img {
+			    	max-height:75px;
+			    }
+			    a{
+					padding:0;
+				}
+			}
+
+			.product-info {
+				width: calc(86% - 150px);
+				width: -webkit-calc(86% - 150px);
+
+			    & > a:not(.product-price):hover {
+			    	text-decoration:underline;
+			    }
+
+			    .product-name {
+				    margin: 0;
+				    font-size: 16px;
+				    line-height: 1;
+				    font-weight:normal;
+				}
+
+				.product-quantity {
+				    margin: 0;
+				    line-height: 1.2;
+				    font-size: 12px;
+				    color: #686868;
+				}
+
+				.product-price {
+				    margin: 0;
+				    font-size: 16px;
+				}
+
+				.product-description {
+					margin: 0;
+				    line-height: 1.2;
+				    font-size: 12px;
+				    color: #686868;
+				}
+			}
+
+			a.product-description-link {
+			    padding: 0;
+			    width: 75px;
+			    display: inline-block;
+			    padding: 0;
+				font-size: 12px;
+				line-height: 1;
+				text-align: right;
+
+				span {
+					font-size:13px;
+					color:#8e8e8d;
+					margin-left:5px;
+				}
+			}
+		}
+	}
+}
+
+/*==== Store Dashboard ========*/
+
+.section-store-dashboard {
+	.title {
+
+		line-height:2.5;
+		margin:0;
+
+		&:after,
+		&:before {
+			content:"";
+			clear:both;
+			display:block;
+		}
+
+		.btn-black {
+			float:right;
+			margin-right: -5px;
+		}
+	}
+
+	.store-description {
+		position:relative;
+
+		.btn-black {
+			position: absolute;
+			right: -5px;
+			top: 90px;
+		}
+	}
+
+	.store-order {
+		padding-top:10px;
+		padding-bottom:25px;
+		border-bottom:solid 4px #EFEFEF;
+
+		.order-listing {
+			margin-left:-15px;
+			margin-right:-15px;
+			overflow:hidden;
+
+			ul {
+				list-style:none;
+				padding:0;
+				margin:0 -5px;
+
+				&:after,
+				&:before {
+					content:"";
+					clear:both;
+					display:block;
+				}
+
+				li{
+					padding:0 5px;
+					width:50%;
+					float:left;
+					position:relative;
+
+					.image-order-listing {
+						display:none;
+					}
+
+					.bg-image-order-listing {
+					    padding: 22% 40%;
+					    background-size:cover;
+					    background-position:center;
+					    background-repeat:no-repeat;
+					    position:relative;
+					    z-index:0;
+					    &:after {
+					    	position:absolute;
+					    	top:0;
+					    	left:0;
+					    	width:100%;
+					    	height:100%;
+					    	display:block;
+					    	content:"";
+					    	background:rgba(0,0,0,0.3);
+					    }
+					}
+
+					.order-count {
+						position:absolute;
+						width:100%;
+						left:0;
+						top:50%;
+						@include transform(translateY(-50%));
+						color:#FFF;
+						font-size:18px;
+						font-family:"Zona Pro";
+						text-align:center;
+						line-height:1;
+
+						span {
+							display:block;
+							font-size:12px;
+							padding-top:2px;
+							font-family:'Neutraface Text';
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.store-sales {
+		padding-top:10px;
+		padding-bottom:25px;
+		border-bottom:solid 4px #EFEFEF;
+
+		.sales-listing {
+			margin-left:-15px;
+			margin-right:-15px;
+			overflow:hidden;
+
+			ul {
+				list-style:none;
+				padding:0;
+				margin:0 -5px;
+
+				&:after,
+				&:before {
+					content:"";
+					clear:both;
+					display:block;
+				}
+
+				li{
+					padding:0 5px;
+					width:33.33%;
+					float:left;
+					position:relative;
+
+					.image-sales-listing {
+						display:none;
+					}
+
+					.bg-image-sales-listing {
+					    padding: 32% 40%;
+					    background-size:cover;
+					    background-position:center;
+					    background-repeat:no-repeat;
+					    position:relative;
+					    z-index:0;
+					    &:after {
+					    	position:absolute;
+					    	top:0;
+					    	left:0;
+					    	width:100%;
+					    	height:100%;
+					    	display:block;
+					    	content:"";
+					    	background:rgba(0,0,0,0.3);
+					    }
+					}
+
+					&.sales-today {
+						.bg-image-sales-listing {
+							background-position:bottom;
+						}
+					}
+
+					&.sales-last-month {
+						.bg-image-sales-listing {
+							background-position:top;
+						}
+					}
+
+					.sales-count {
+						position:absolute;
+						width:100%;
+						left:0;
+						top:50%;
+						@include transform(translateY(-50%));
+						color:#FFF;
+						font-size:18px;
+						font-family:"Zona Pro";
+						text-align:center;
+						line-height:1;
+
+						span {
+							display:block;
+							font-size:12px;
+							padding-top:2px;
+							font-family:'Neutraface Text';
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.store-products {
+		padding-top:10px;
+		padding-bottom:5px;
+		border-bottom:solid 1px #EFEFEF;
+
+		.container {
+			padding-left:0;
+			padding-right:0;
+		}
+
+		ul.category-links {
+			padding: 0;
+			margin: 0;
+			overflow: hidden;
+			list-style: none;
+			text-align: center;
+			color: #1D1D1B;
+			font-size: 14px;
+			margin-left: -5px;
+			margin-right: -5px;
+
+			li {
+				width: 25%;
+				float: left;
+				padding: 0 5px;
+
+				a {
+					color: #1D1D1B;
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+/*====== Sales Page Style =======*/
+
+.store-sales-section {
+
+	.store-sales-chart {
+		padding-top:15px;
+
+		.chart-container {
+			padding-bottom:10px;
+
+			img {
+				width:100%;
+			}
+		}
+
+		.chart-legend {
+			padding-top:7px;
+			padding-bottom:7px;
+			background:#EFEFEF;
+			margin-left:-15px;
+			margin-right:-15px;
+			text-align:center;
+
+			span {
+				display:inline-block;
+				padding-left:40px;
+				background-position:left center;
+				background-repeat:no-repeat;
+				margin:0 10px;
+				background-size: 35px;
+
+				&.legend-revenue{
+					background-image:url(../../images/chart-legend-icon-black.svg);
+				}
+			}
+		}
+	}
+
+	.store-sales {
+		padding-top:10px;
+		padding-bottom:5px;
+		border-bottom:solid 1px #EFEFEF;
+
+		.sales-listing {
+			margin-left:-15px;
+			margin-right:-15px;
+			overflow:hidden;
+
+			ul {
+				list-style:none;
+				padding:0;
+				margin:0 -5px;
+
+				&:after,
+				&:before {
+					content:"";
+					clear:both;
+					display:block;
+				}
+
+				li{
+					padding:0 5px;
+					width:33.33%;
+					float:left;
+					position:relative;
+
+					.image-sales-listing {
+						display:none;
+					}
+
+					.bg-image-sales-listing {
+					    padding: 32% 40%;
+					    background-size:cover;
+					    background-position:center;
+					    background-repeat:no-repeat;
+					    position:relative;
+					    z-index:0;
+					    &:after {
+					    	position:absolute;
+					    	top:0;
+					    	left:0;
+					    	width:100%;
+					    	height:100%;
+					    	display:block;
+					    	content:"";
+					    	background:rgba(0,0,0,0.3);
+					    }
+					}
+
+					&.sales-today {
+						.bg-image-sales-listing {
+							background-position:bottom;
+						}
+					}
+
+					&.sales-last-month {
+						.bg-image-sales-listing {
+							background-position:top;
+						}
+					}
+
+					.sales-count {
+						position:absolute;
+						width:100%;
+						left:0;
+						top:50%;
+						@include transform(translateY(-50%));
+						color:#FFF;
+						font-size:18px;
+						font-family:"Zona Pro";
+						text-align:center;
+						line-height:1;
+
+						span {
+							display:block;
+							font-size:12px;
+							padding-top:2px;
+							font-family:'Neutraface Text';
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.store-sales-total {
+		text-align:center;
+		padding-top:22px;
+		padding-bottom:22px;
+		border-bottom:solid 1px #EFEFEF;
+
+		h2{
+			margin:0;
+			font-size:16px;
+			margin:0;
+		}
+
+		p{
+			margin:0;
+			font-size:40px;
+			line-height:1;
+			font-weight:300;
+		}
+	}
+
+	.store-best-seller {
+		padding-top:10px;
+		padding-bottom:5px;
+		border-bottom:solid 1px #EFEFEF;
+
+		h3 {
+
+			line-height:2.5;
+			margin:0;
+
+			.btn-black {
+				float:right;
+			}
+		}
+
+		span.product-available {
+			width: 23px;
+			height: 23px;
+			margin-right: 0;
+			position: absolute;
+			left: 40px;
+			z-index: 3;
+			top: 30px;
+
+			.marker {
+				background:url(../../images/check-mark-icon.svg) no-repeat center center #2D2D2D;
+				background-size: 16px;
+				@include border-radius(5px);
+				position:absolute;
+				top:0;
+				left:0;
+				width:100%;
+				height:100%;
+				opacity:0.2;
+
+				&.loading {
+				    background-image: url(../../images/loadingstock.gif);
+				    background-color: transparent;
+				}
+
+				&.active {
+				    opacity: 1;
+				}
+
+				&.checked {
+					opacity:1;
+				}
+			}
+
+			input[type="checkbox"]{
+				position:absolute;
+				top:0;
+				left:0;
+				width:100%;
+				height:100%;
+				z-index:2;
+				margin:0;
+				opacity:0;
+			}
+
+			input[type="checkbox"]:checked + .marker {
+				opacity:1;
+			}
+		}
+
+		ul {
+			list-style:none;
+			padding:10px 0 0 0;
+			margin:0;
+
+			li {
+				width:100%;
+				text-align:center;
+				position:relative;
+
+				a {
+					display:block;
+				}
+
+				img {
+					width:auto !important;
+					max-width:100%;
+					margin:0 auto;
+					max-width:57px;
+				}
+			}
+		}
+	}
+}
+
+/*====== Order Search History Page Style =======*/
+
+.stickyfooter {
+	position:fixed;
+	width:100%;
+	bottom:0;
+	left:0;
+	z-index:999;
+
+	button,a,input[type="submit"] {
+		padding:15px;
+		line-height:1;
+		border:none;
+		background-color:#2D2D2D;
+		cursor:pointer;
+		color:#FFF;
+		font-size:20px;
+		font-family:"Zona Pro";
+		display:inline-block;
+		width:100%;
+		text-transform:uppercase;
+		text-align:center;
+		@include border-radius(0);
+		margin-bottom:0;
+
+		&:hover {
+			color:#FFF;
+		}
+	}
+
+	.btn-order-accept {
+		background-color:#FF6C61;
+	}
+
+	&.btn-count-2 {
+
+		&:after,
+		&:before {
+			content:"";
+			clear:both;
+			display:block;
+		}
+
+		button,a {
+			width:50%;
+			float:left;
+		}
+	}
+}
+
+#error-popup {
+
+	.modal-content {
+		max-width: 240px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.modal-header{
+		border:none;
+	}
+
+	.modal-body {
+		text-align:center;
+		font-size:13px;
+		line-height:1.3;
+		color:#686868;
+		padding-bottom:45px;
+		padding-top:10px;
+
+		h2 {
+			font-size:18px;
+			margin:30px 0 12px;
+			color:#1D1D1B;
+		}
+
+		img {
+			max-width:110px;
+		}
+
+		p {
+		    max-width: 175px;
+		    margin-left: auto;
+		    margin-right: auto;
+		}
+	}
+
+	.modal-footer {
+		border:none;
+
+		button {
+			padding:15px;
+			line-height:1;
+			border:none;
+			background-color:#FF6C61;
+			cursor:pointer;
+			color:#FFF;
+			font-size:20px;
+			font-family:"Zona Pro";
+			display:inline-block;
+			width:100%;
+			text-transform:uppercase;
+			display:block;
+		}
+
+		input[type="submit"],
+		button,
+		a{
+			display:block;
+			font-size:16px;
+			line-height:18px;
+			font-family:"Zona Pro";
+			text-transform:uppercase;
+			letter-spacing:0.20em;
+			padding:13px 10px;
+			color:#FFF;
+			border:none;
+			text-align:center;
+			background:#FF6C61;
+			width:100%;
+			margin-top:20px;
+		}
+
+		input[type="submit"]:hover,
+		input[type="submit"]:focus,
+		button:hover,
+		button:focus {
+			background-color:#f3867d;
+		}
+	}
+}
+
+.store-order-search-history-section {
+
+	min-height: -webkit-calc(100vh - 93px);
+	min-height: calc(100vh - 93px);
+
+	ul.nav-tabs{
+		li {
+			a{
+				background-color: #EFEFEF;
+			}
+
+			&.active{
+				a{
+					background-color:#FFF;
+				}
+			}
+		}
+	}
+
+	#search-wrap{
+
+		.search-wrap-outer{
+			height: -webkit-calc(100vh - 133px);
+			height: calc(100vh - 133px);
+			display:table;
+			width:80%;
+			margin:0 auto;
+		}
+
+		.search-inner {
+			display:table-cell;
+			vertical-align:middle;
+			max-width:80%;
+			padding:80px 0;
+
+			img {
+				display:block;
+				margin:0 auto;
+				max-width:110px;
+				margin-bottom:20px;
+			}
+
+			.search-form {
+				label {
+					font-size:12px;
+					text-transform:uppercase;
+					font-family:"Zona Pro";
+					letter-spacing:0.2em;
+				}
+
+				.help-text {
+					font-size:14px;
+					line-height:1.3;
+					margin-top:10px;
+				}
+			}
+		}
+	}
+
+	#order-history-wrap,
+	.order-history-desktop {
+		ul {
+			padding:0;
+			margin:0;
+			list-style:none;
+
+			li {
+				padding:15px;
+				border-bottom:solid 1px #E5E5E5;
+				overflow:hidden;
+
+				.order-info {
+
+					width: 38%;
+					display:inline-block;
+					vertical-align:middle;
+
+					span {
+						display:block;
+						line-height:1.3;
+					}
+
+					.orderId {
+						font-size:11px;
+						font-family:"Zona Pro";
+						letter-spacing:0.2em;
+					}
+
+					.orderCount {
+						font-size:14px;
+						color:#686868;
+					}
+
+					.orderCost {
+						font-size:15px;
+						color:#2D2D2D;
+					}
+				}
+
+				.order-summary-link {
+					width: 10px;
+					height: 10px;
+					display: inline-block;
+					padding: 0;
+					background: url(../../images/child-trigger.png) no-repeat center center;
+					vertical-align:middle;
+				}
+
+				.order-thumb {
+				    width: -webkit-calc(59% - 10px);
+				    width: calc(59% - 10px);
+				    display:inline-block;
+				    vertical-align:middle;
+				    overflow:hidden;
+
+				    span{
+				    	text-align:center;
+				    	width:33.33%;
+				    	float:left;
+				    	display:none;
+
+				    	&:nth-child(-n+3){
+				    		display:block;
+				    	}
+				    }
+				}
+			}
+		}
+	}
+}
+
+/*===== Order Listing Section =======*/
+
+.order-header {
+	padding:13px;
+	border-bottom:solid 1px #EFEFEF;
+	background:#FFF;
+
+	h3 {
+		margin:0;
+		letter-spacing:0.2em;
+
+		[class*="btn-"] {
+			margin:0 15px 0 0;
+			font-weight:normal;
+		}
+
+		span {
+			width: -webkit-calc(100% - 80px);
+			width: calc(100% - 80px);
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+}
+
+.sales-order-listing-section {
+
+	background: #f7f7f7;
+    padding-bottom: 50px;
+
+	.product-count {
+	    font-size: 14px;
+	    color: #FF6C61;
+	    font-family: 'Neutraface Text';
+	    font-weight:500;
+	    margin-left: 10px;
+	    display: inline-block;
+	    vertical-align: middle;
+	    margin-top: -5px;
+	    text-transform:none;
+	}
+}
+
+.product-list-group {
+	background:#FFF;
+
+	ul {
+		list-style:none;
+		padding:0;
+		margin:0;
+
+		li {
+			padding: 15px;
+			border-bottom: solid 1px #E5E5E5;
+			padding-right:10px;
+
+			.product-image,
+			.product-img {
+				width: 23%;
+				text-align: center;
+				margin-right: 5px;
+				img {
+			    	max-height:75px;
+			    }
+			    a{
+					padding:0;
+				}
+			}
+
+			.product-info {
+				width: calc(77% - 68px);
+				width: -webkit-calc(77% - 68px);
+				padding-right: 5px;
+
+				& > a:not(.product-price):hover {
+			    	text-decoration:underline;
+			    }
+
+				.product-name {
+					margin: 0;
+					font-size: 16px;
+					line-height: 1;
+					font-weight:normal;
+				}
+
+				.product-quantity {
+				    margin: 0;
+				    line-height: 1.2;
+				    font-size: 12px;
+				    color: #686868;
+				}
+
+				.product-price {
+				    margin: 0;
+				    font-size: 16px;
+				}
+
+				.product-description {
+					margin: 0;
+				    line-height: 1.2;
+				    font-size: 12px;
+				    color: #686868;
+				}
+			}
+
+			.product-serve {
+				color:#686868;
+				line-height: 1.4;
+				font-size: 13px;
+				color: #686868;
+				margin:0;
+
+				&:before{
+					content:"";
+					display:inline-block;
+					width:10px;
+					height:12px;
+					background:url(../../images/serves-icon.svg) no-repeat center center;
+					background-size:10px;
+					vertical-align:-1px;
+					margin-right:5px;
+				}
+			}
+
+			.product-modify {
+
+				width: 50px;
+			    text-align: right;
+
+				* {
+					display:inline-block;
+					vertical-align:middle;
+					color:#565656;
+					font-size: 17px;
+				}
+
+				button[class*="prod-"]{
+					border:none;
+					padding:0;
+					background:transparent;
+					background-repeat:no-repeat;
+					background-position:center center;
+					width:12px;
+					height:9px;
+
+					&.prod-remove {
+						background-image:url(../../images/icon-minus.png);
+						margin-right: 3px;
+					}
+
+					&.prod-add {
+						background-image:url(../../images/icon-plus.png);
+						margin-left: 3px;
+					}
+				}
+
+				.product-detail-link {
+					border:none;
+					padding:0;
+					background:transparent;
+					background-repeat:no-repeat;
+					background-position:center center;
+					width:12px;
+					height:9px;
+					background-image:url(../../images/child-trigger.png);
+				}
+
+				.product-quan {
+				    min-width: 33px;
+				    min-height: 25px;
+				    line-height: 1.1;
+				    text-align: center;
+				    padding: 2px;
+				    @include border-radius(2px);
+				    background:#EAEAEA;
+				    font-size:16px;
+				    max-width:45px;
+				}
+			}
+
+			.product-cart {
+			    a {
+				    width: 30px;
+				    height: 26px;
+				    display: inline-block;
+				    background: url(../../images/cart.svg) no-repeat center center;
+				}
+			}
+
+			.order-summary-link {
+			    width: 10px;
+			    height: 10px;
+			    display: inline-block;
+			    padding: 0;
+			    background: url(../../images/child-trigger.png) no-repeat center center;
+			    vertical-align: middle;
+			    text-indent:-9999px;
+			}
+		}
+	}
+
+	& > ul {
+		& > li {
+			& > * {
+				display: inline-block;
+				vertical-align: middle;
+				padding-bottom:0 !important;
+			}
+		}
+	}
+
+	.total-price-wrap {
+
+		padding:13px;
+		font-size:16px;
+		text-transform:uppercase;
+		border-top:solid 4px #EFEFEF;
+		border-bottom: solid 1px #E5E5E5;
+
+		&:after,
+		&:before {
+			content:"";
+			clear:both;
+			display:block;
+		}
+
+		& > span {
+			width:49%;
+			display:inline-block;
+			vertical-align:middle;
+
+			&.total-price {
+				text-align:right;
+			}
+		}
+	}
+}
+
+.sales-order-listing-section{
+	.product-list-group {
+		ul {
+			li {
+				.product-info {
+					width: calc(77% - 102px);
+					width: -webkit-calc(77% - 102px);
+					position: relative;
+					padding-right: 5px;
+				}
+
+				.product-modify {
+					width:90px;
+				}
+			}
+		}
+	}
+}
+
+/*==== Store Transaction ======*/
+
+.store-order-transaction-complete-section {
+	.transaction-complete {
+	    height: calc(100vh - 93px);
+	    display: table;
+	    width: 100%;
+
+	    .transaction-complete-inner {
+		    display: table-cell;
+		    width: 100%;
+		    vertical-align: middle;
+		    padding: 50px 20px;
+		    text-align:center;
+
+		    img {
+		    	max-width:105px;
+		    	margin-bottom:55px;
+		    }
+
+		    h2 {
+		    	margin:0 0 40px;
+		    	font-family:"Zona Pro";
+		    	font-size:14px;
+		    	text-transform:uppercase;
+		    	letter-spacing:0.25em;
+		    	line-height: 1.5;
+		    }
+
+		    h3{
+		    	padding-right: 15px;
+		    }
+
+		    p{
+		    	font-size:16px;
+		    	letter-spacing:0.025em;
+		    }
+		}
+	}
+}
+
+/*==== Rider Verification ======*/
+
+.sales-rider-confirmation-section {
+	.rider-conf-wrap {
+		width:100%;
+		display:table;
+		height:-webkit-calc(100vh - 143px);
+		height:calc(100vh - 143px);
+		max-width: 80%;
+		margin: 0 auto;
+
+		.rider-conf-inner {
+			display:table-cell;
+			vertical-align:middle;
+			padding:60px 0;
+
+			img {
+				max-width:115px;
+				margin:0 auto 25px;
+				display:block;
+			}
+
+			p{
+				margin-bottom:20px;
+			}
+		}
+	}
+}
+
+/*===== Product Description Page =====*/
+
+.sales-product-description-section {
+
+	margin-top:-4px;
+	position:relative;
+
+	.order-header {
+		position: absolute;
+		width:100%;
+		background:transparent;
+		border:none;
+	}
+
+	.product-image {
+		display:table;
+		width:100%;
+		height:180px;
+		padding:5px;
+		text-align:center;
+		background:#FFFFFF;
+
+		&.visible-xs{
+			display:table !important;
+		}
+
+		.product-image-inner {
+			width:100%;
+			display:table-cell;
+			vertical-align:middle;
+
+			img {
+				max-height:130px;
+			}
+		}
+	}
+
+	ul.nav-tabs {
+		margin:0;
+		border-color:#EFEFEF;
+
+		li {
+			a {
+				background:#EFEFEF;
+			}
+
+			&.active {
+				a {
+					background:#FFFFFF;
+				}
+			}
+		}
+	}
+
+	.tab-pane {
+		padding:15px;
+	}
+
+	.product-quantity {
+		color:#686868;
+		font-size:12px;
+		margin-bottom:12px;
+	}
+
+	.product-info {
+		font-size:14px;
+		margin:0;
+		padding-bottom: 50px;
+
+		.product-description {
+			margin: 0;
+		    line-height: 1.2;
+		    font-size: 12px;
+		    color: #686868;
+		}
+	}
+
+	.product-measures {
+		padding:0;
+		margin:0;
+		list-style:none;
+
+		li{
+			font-size:11px;
+			text-align:center;
+			display: inline-block;
+    		width: 19%;
+    		vertical-align:top;
+
+			.elem-measure {
+
+				display:block;
+				background:#EFEFEF;
+				@include border-radius(3px);
+				line-height:1.1;
+				padding:6px;
+
+				span {
+					width:100%;
+					display:block;
+					font-size:12px;
+					font-weight:500;
+				}
+			}
+
+			.elem-proportion {
+				width:100%;
+				display:block;
+				line-height:1.1;
+				padding:3px;
+				background:#B5B5B5;
+				@include border-radius(3px);
+				font-family:"Zona Pro";
+				margin-top:3px;
+				margin-bottom:15px;
+
+				&.elem-fat {
+					background:#FF6C61;
+				}
+
+				&.elem-saturates {
+					background:#EFCF7F;
+				}
+
+				&.elem-sugars {
+					background:#5BE8A5;
+				}
+
+				&.elem-salt {
+					background:#5BE8A5;
+				}
+			}
+		}
+	}
+
+	span.product-available {
+		width:23px;
+		height:23px;
+		margin-right:5px;
+		position:relative;
+		display:inline-block;
+		vertical-align:-4px;
+
+		.marker {
+			background:url(../../images/check-mark-black-icon.svg) no-repeat center center #FFFFFF;
+			background-size: 16px;
+			@include border-radius(5px);
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			opacity:0.3;
+
+			&.loading {
+			    background-image: url(../../images/loadingstock.gif);
+			    background-color: transparent;
+			}
+
+			&.active {
+			    opacity: 1;
+			}
+
+			&.checked {
+				opacity:1;
+			}
+		}
+
+		input[type="checkbox"]{
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			z-index:2;
+			margin:0;
+			opacity:0;
+		}
+
+		input[type="checkbox"]:checked + .marker {
+			opacity:1;
+		}
+	}
+}
+
+/*===== Order History =====*/
+
+.sales-order-history-section {
+	min-height: -webkit-calc(100vh - 44px) !important;
+	min-height: calc(100vh - 44px) !important;
+	background: #f7f7f7;
+    padding-bottom: 50px;
+}
+
+
+/*==== Store Profile Edit ======*/
+
+.store-profile-edit-section {
+
+	.alert {
+	    padding: 5px;
+	    text-align: left;
+	    width: 100%;
+	    z-index: 5;
+	    @include border-radius(0);
+	    border:none;
+	    border-left:solid 5px;
+	    margin:20px 0;
+
+	    ul {
+	    	list-style:none;
+	    	padding:0;
+	    	margin:0;
+	    }
+	}
+
+	label {
+		text-align:left !important;
+	}
+
+	.panel {
+		border:none;
+		padding:0;
+		box-shadow:none;
+
+		.panel-body {
+			padding:0;
+		}
+	}
+
+	.btn-pro-pic {
+		width: 140px;
+		height: 140px;
+		position:absolute;
+		background: url(../../images/camera-icon.svg) no-repeat center center;
+		background-size: 100%;
+		border: none;
+		cursor: pointer;
+		overflow: hidden;
+		top: 58px;
+		z-index: 4;
+		background-size: 25px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+
+		input {
+			opacity:0;
+			margin-top:50px;
+		}
+	}
+
+	.store-description {
+		min-height:140px;
+		border-bottom:0;
+		position:relative;
+
+		.bg-store-banner-image {
+			z-index:0;
+		}
+
+		.bg-store-image {
+			width: 140px;
+			height: 140px;
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+			@include border-radius(50%);
+			margin: 15px auto 0;
+			position:relative;
+			z-index:2;
+		}
+	}
+
+	.btn-submit-profile {
+		font-size:16px;
+		font-family:"Zona Pro";
+		background: #FF6C61;
+		color:#FFF;
+		text-transform:uppercase;
+		letter-spacing:0.25em;
+	}
+
+	.order-header {
+		margin-bottom:15px;
+	}
+}
+
+.section-store-bank-details {
+	#bank_details {
+		text-align:left;
+		margin-bottom:10px;
+		border-bottom: solid 1px #DDD;
+    	padding-bottom: 10px;
+
+		&:empty {
+			display:none;
+		}
+	}
+
+	.center {
+		text-align:left;
+	}
+}
+
+.store-payment-edit-section {
+	padding-top:15px;
+	padding-bottom:50px;
+}
+
+.store-wallet-section {
+	padding-top:15px;
+
+	.wallet-bal {
+	    font-size: 20px;
+	    margin-bottom:10px;
+
+	    span {
+		    font-weight: bolder;
+		    font-size: 34px;
+		    vertical-align: -3px;
+		    margin-left: 10px;
+		}
+	}
+}
+
+/*==== Loading Pverlay In Body ====*/
+
+.loading-content {
+    position: relative;
+    z-index: 9;
+}
+
+.loading-content::after {
+    background: url(../../images/loader2.svg) no-repeat center center rgba(0, 0, 0, 0.5);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    margin: -5px auto 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+
+/*===== Single Layout ======*/
+
+.store-single-layout {
+	border-top: 0 none;
+
+    & > .order-info {
+    	border-top: 0;
+    	padding-top: 0;
+    }
+
+    &.customer-order-status {
+    	padding-top:25px;
+    }
+}
+
+/*==== Availability =======*/
+
+.availability-section {
+	.order-header {
+		h3 {
+			& > span {
+			    width: -webkit-calc(100% - 155px);
+				width: calc(100% - 155px);
+			}
+
+			.time-heading {
+				float: right;
+    			width: 70px;
+    			font-size:12px;
+    			color:#686868;
+    			text-transform:none;
+    			font-family:'Neutraface Text';
+    			font-weight:normal;
+    			letter-spacing:0;
+    			text-align:center;
+    			padding-top: 3px;
+
+    			span {
+    				width:48%;
+    			}
+			}
+		}
+	}
+
+	.error {
+	    color: red;
+	    font-size: 14px;
+	    margin-top: 10px;
+	    padding-left: 50px;
+
+	    &:empty {
+	    	display:none;
+	    }
+	}
+}
+
+.time-table {
+	padding:0;
+	list-style:none;
+	margin:0 auto 30px;
+	max-width:650px;
+
+	#store-time {
+		padding-bottom:50px;
+	}
+
+	li {
+		padding:10px 15px;
+		border-bottom:solid 1px #efefef;
+		margin-left:30px;
+		padding-left:0;
+
+		&.active-strip {
+		    position:relative;
+
+		    & + .active-strip:before {
+			    content:"";
+			    width: 22px;
+			    height: 25px;
+			    display:inline-block;
+			    background: #FF6C61;
+			    position:absolute;
+			    left:-30px;
+			    top: -13px;
+			}
+
+			&.save-state {
+				.checked {
+					&:after {
+						background: #f3aea8;
+					}
+				}
+
+				& + .active-strip:before{
+					background: #f3aea8;
+				}
+			}
+		}
+
+		input[type="checkbox"] {
+			margin:0;
+		}
+
+		label {
+			margin:0 0 0 -30px;
+		}
+
+		.opening-hrs {
+			display:block;
+			width:100%;
+
+			label {
+				margin:0;
+				display:inline-block;
+				margin-right:10px;
+			}
+		}
+	}
+}
+
+#info_div {
+	.time-table {
+		li {
+			margin-left:0;
+		}
+	}
+}
+
+select#theDay {
+    max-width: 650px;
+    margin: 0 auto 20px;
+}
+
+div#getdata {
+    padding: 0 15px 50px;
+}
+
+.days-selector {
+	padding:0 15px;
+	margin-top:20px;
+}
+
+/*===== Mango Pay =========*/
+
+.store-payout-section {
+	.order-header {
+		margin-bottom:15px;
+	}
+
+	.container {
+		padding:0;
+	}
+
+	#edit-submit {
+		width:100%;
+		max-width:320px;
+		margin:0 auto 25px;
+		display:block;
+	}
+
+	.form-item-banktype {
+		display:block !important;
+	}
+
+	.error-msg {
+		color: #ce3232;
+	    text-transform: none;
+	    font-size: 14px;
+	    text-align:center;
+	    margin-bottom:10px;
+	    font-weight:bold;
+	}
+
+	.error {
+		border:solid 1px #ce3232;
+	}
+}
+
+
+/*======= Address Edit Section =======*/
+
+.store-address-edit-section {
+	#form-store-kyc-detail {
+		& > .col-xs-12 {
+			padding-left:0;
+			padding-right:0;
+		}
+	}
+}
+
+/*====== KYC Update =======*/
+
+.store-kyc-status {
+	.order-header {
+		padding-bottom:0;
+		border:0;
+
+		.title {
+			border-bottom: 1px solid #e5e5e5;
+		    font-size: 15px;
+		    margin: 0 0 20px;
+		    padding-bottom: 13px;
+		    padding-top: 5px;
+		}
+	}
+
+	.table-kyc {
+		white-space:normal;
+		word-wrap:break-word;
+
+		.sno {
+			width:70px;
+		}
+
+		.doc-status {
+			//width:200px;
+			text-align:center;
+		}
+
+		.kyc-status-refresh {
+			cursor:pointer;
+
+			&.loading {
+				@include rotate360;
+			}
+		}
+
+		tbody {
+			tr {
+				td:last-child{
+					text-align:center;
+				}
+			}
+		}
+	}
+}
+
+table {
+	width:100%;
+	table-layout:fixed;
+	margin-bottom:20px;
+
+	thead {
+		background:#1c1c1c;
+		color:#FFF;
+	}
+
+	td,th {
+		padding:8px 10px;
+		vertical-align:top;
+	}
+
+	tbody {
+		tr {
+			background:#FFF;
+			border-bottom:solid 1px #DDD;
+
+			&:nth-child(even){
+				background:#f9f9f9;
+			}
+
+			img {
+				width:100px;
+				height:auto;
+			}
+		}
+	}
+}
+
+/*==== Opening Time PopUp =====*/
+
+.modal-type-simple {
+	.modal-dialog {
+		width:90%;
+		max-width:320px !important;
+
+		.modal-header {
+			border:none;
+		}
+
+		.modal-content {
+			.modal-body {
+			    position: relative;
+			    text-align:center;
+			    padding: 15px 45px 30px;
+
+			    ul {
+					text-align:left;
+					list-style:none;
+					padding:0;
+					margin:15px 0 0 0;
+					border-top:solid 1px #FF6C61;
+
+					li {
+						padding: 10px 15px;
+						border-bottom: solid 1px #DDD;
+						overflow: hidden;
+						font-size: 15px;
+						color: #6f6f6f;
+
+						&:last-child {
+							border:0;
+						}
+
+						.time{
+							float:right;
+							color:#000;
+							display:inline-block;
+						}
+					}
+				}
+
+				img {
+					max-width:60px;
+					margin-bottom:15px;
+				}
+
+				h3 {
+					font-family: 'Neutraface Text';
+					text-transform: none;
+					letter-spacing: 0;
+					font-weight: normal;
+					font-size: 20px;
+					color: #000;
+				}
+			}
+		}
+	}
+}
+
+#openingModal {
+	.modal-dialog {
+		.modal-content {
+			.modal-body {
+				.opening-time {
+					li {
+						padding:0;
+						border:none;
+
+						.day {
+							padding: 10px 15px;
+							display:block;
+							border-bottom:1px solid #ddd;
+							cursor:pointer;
+							position:relative;
+
+							&:after {
+								content:">";
+								position: absolute;
+								right:4px;
+								top:5px;
+								font-size: 22px;
+								@include transition(0.25s ease all);
+								@include transform(rotate(0deg));
+							}
+
+							&.active {
+								&:after {
+									@include transition(0.25s ease all);
+									@include transform(rotate(90deg));
+								}
+							}
+
+							&.single-time {
+								padding-right:0;
+								
+								&:after {
+									content:none;
+								}
+
+								span {
+									float:right;
+									font-size:14px;
+									color:#8e8e8d;
+								}
+							}
+						}
+
+						.time {
+							display:block;
+							float:none;
+							padding:10px 20px;
+							border-bottom:1px solid #ddd;
+							font-size: 14px;
+							color: #8e8e8d;
+						}
+
+						ul {
+							margin:0;
+							border:none;
+							display:none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#promoCode {
+	.modal-content {
+		.modal-body {
+			padding:15px 50px 100px;
+			color:#7b7b7b;
+
+			img {
+				max-width: 105px;
+				margin: 30px auto 50px;
+			}
+
+			h3 {
+				margin-bottom:20px;
+			}
+
+			p {
+				margin:0;
+			}
+		}
+	}
+}
+
+.section-store-bank-details {
+	.order-header {
+		margin-bottom:20px;
+	}
+}
+
+.store-unavail-error {
+	background-color:#f16b61;
+	color:#FFF;
+	font-size:16px;
+	padding:10px 15px;
+	line-height:1.2;
+	text-align:center;
+	position:relative;
+
+	a {
+		color:#FFF;
+		text-decoration:underline;
+		cursor:pointer;
+	}
+}
+
+.table-price-compare {
+	max-width:350px;
+	margin:0 auto 35px;
+	display:none;
+	border: none;
+	padding:15px;
+
+	table {
+		margin-bottom:10px !important;
+	}
+
+	.edit-price-wrap {
+		display:none;
+	}
+
+	input {
+		width:50px;
+		display:inline-block;
+	}
+
+	button {
+		margin:0 0 0 5px;
+	}
+}
+
+.suggest-note {
+	color:#8e8e8d;
+	margin-bottom:20px;
+}
+
+#add-store {
+	.modal-body {
+		padding-bottom:0;
+	}	
+}
+
+@media (min-width:768px){
+
+	.stickyfooter{
+		position:static;
+		clear:both;
+
+		button,a,input[type="submit"] {
+			display: block;
+			min-height: 38px;
+			background: #FF6C61;
+			@include border-radius(10px);
+			cursor: pointer;
+			text-align: center;
+			line-height: 30px;
+			font-family: "Zona Pro";
+			font-size: 16px;
+			color: #FFF;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			cursor: pointer;
+			padding: 4px 23px;
+			margin: 0 auto;
+			max-width: 320px;
+			@include transition(0.25s ease all);
+			white-space:normal;
+
+			&:hover {
+				background:#000;
+				color:#FFF;
+				@include transition(0.25s ease all);
+			}
+		}
+
+		.product-count {
+			display:none;
+		}
+
+		&.action-buttons.btn-count-2 {
+			text-align:center;
+			* {
+				display:inline-block;
+				float:none;
+			}
+		}
+	}
+
+	.store-template {
+
+		.store-content-section {
+			position:relative;
+			min-height: -webkit-calc(100vh - 117px);
+			min-height: calc(100vh - 117px);
+			border-top:solid 4px #EFEFEF;
+			padding-top: 35px;
+
+			&.store-profile,
+			&.section-store-dashboard,
+			&.sales-product-description-section {
+				padding-top:0;
+				border-top:0;
+			}
+
+			&.store-product-section {
+				padding-top:0;
+			}
+		}
+
+		.store-description {
+			border:0;
+			position:static;
+			min-height:185px;
+			padding-left: 0;
+			padding-right: 0;
+
+			& + .container {
+				padding:0 15px;
+			}
+
+			.bg-store-banner-image {
+				min-height:185px;
+				z-index:0;
+			}
+
+			.store-desc {
+
+				.bg-store-image {
+					width: 170px;
+					height: 170px;
+					margin: 30px 0 0;
+					position:relative;
+				}
+
+				.store-name {
+					position: absolute;
+					bottom: 45px;
+					left: 205px;
+					color:#FFF;
+					font-size:20px;
+					text-align:left;
+
+					span {
+						font-size:18px;
+						display:block;
+						font-family:'Neutraface Text';
+						font-weight:normal;
+						text-transform:none;
+						letter-spacing:0.025em;
+					}
+				}
+
+				.action-pic-upload {
+					width: 200px;
+					height: 38px;
+					background:#FF6C61;
+					@include border-radius(10px);
+					cursor:pointer;
+					position: absolute;
+					right: 0;
+					bottom: 40px;
+					text-align:center;
+
+					&:before {
+						content:"Change Picture";
+						position:absolute;
+						height:100%;
+						width:100%;
+						display:block;
+						top:0;
+						left:0;
+						line-height: 40px;
+						font-family: "Zona Pro";
+						font-size: 16px;
+						color: #FFF;
+						text-transform: uppercase;
+						letter-spacing: 0.1em;
+						cursor:pointer;
+					}
+
+					input {
+						cursor:pointer;
+					}
+				}
+			}
+		}
+
+		.siteHeader {
+			border:none;
+		}
+
+		.title {
+			padding-bottom:13px;
+			padding-top:5px;
+			margin:0 0 20px;
+			border-bottom:solid 1px #E5E5E5;
+			font-size:15px;
+		}
+
+		.section-store-dashboard {
+			.store-order {
+
+				padding-top:0;
+				padding-bottom:35px;
+				border-bottom:none;
+				padding-right: 25px;
+
+				.order-listing {
+					margin:0 auto;
+					max-width:320px;
+
+					ul {
+						li {
+							.order-count {
+								font-size: 20px;
+							}
+						}
+					}
+
+					[class*="btn-"]{
+						width:100%;
+						line-height:29px;
+						font-size:16px;
+						text-transform:uppercase;
+						color:#FFF;
+						margin:13px 0 0 0;
+						font-family:'Zona Pro';
+						text-align:center;
+						@include border-radius(10px);
+						letter-spacing:0.1em;
+					}
+				}
+			}
+
+			.store-sales {
+				padding-top:0;
+				padding-bottom:35px;
+				border-bottom:none;
+				padding-left: 25px;
+
+				.sales-listing {
+					margin:0 auto;
+					max-width:340px;
+
+					ul {
+						li {
+							.sales-count {
+								font-size: 20px;
+							}
+						}
+					}
+
+					[class*="btn-"]{
+						width:100%;
+						line-height:29px;
+						font-size:16px;
+						text-transform:uppercase;
+						color:#FFF;
+						margin:13px 0 0 0;
+						font-family:'Zona Pro';
+						text-align:center;
+						@include border-radius(10px);
+						letter-spacing:0.1em;
+					}
+				}
+			}
+
+			.store-products {
+				border:0;
+				border-top: solid 4px #EFEFEF;
+				padding:30px 0 50px;
+
+				.container {
+					padding-left:15px;
+					padding-right:15px;
+				}
+
+				ul {
+					&.category-links {
+						margin:0 -25px;
+						overflow:hidden;
+
+						li {
+							width:25%;
+							padding:0 25px;
+						}
+
+						.category-main {
+							display:block;
+							width:100%;
+							font-size:12px;
+							line-height:1.2;
+							padding:10px 0;
+							border-bottom:solid 1px #FF6C61;
+							font-family:'Zona Pro';
+							text-transform:uppercase;
+							letter-spacing:0.20em;
+							margin-top:15px;
+						}
+
+						ul.sub-category {
+							list-style:none;
+							padding:0;
+							margin:0 0 35px;
+							width:100%;
+
+							li {
+								width:100%;
+								font-size:16px;
+								line-height:1.2;
+								padding:10px 0;
+								border-bottom:solid 1px #AFAFAF;
+								float:none;
+							}
+						}
+					}
+				}
+
+				.see-all-prod {
+					display:block;
+					height: 38px;
+					background: #FF6C61;
+					@include border-radius(10px);
+					cursor: pointer;
+					text-align: center;
+					line-height: 30px;
+					font-family: "Zona Pro";
+					font-size: 16px;
+					color: #FFF;
+					text-transform: uppercase;
+					letter-spacing: 0.1em;
+					cursor: pointer;
+					padding-left:23px;
+					padding-right:23px;
+					margin:0 auto;
+					max-width:310px
+				}
+			}
+
+			.title {
+				line-height:1;
+
+				.btn-black {
+					display:none;
+				}
+			}
+
+			.store-description {
+				.btn-black {
+					height: 38px;
+					background: #FF6C61;
+					@include border-radius(10px);
+					cursor: pointer;
+					position: absolute;
+					right: 0;
+					bottom: 40px;
+					text-align: center;
+					line-height: 30px;
+					font-family: "Zona Pro";
+					font-size: 16px;
+					color: #FFF;
+					text-transform: uppercase;
+					letter-spacing: 0.1em;
+					cursor: pointer;
+					padding-left:23px;
+					padding-right:23px;
+
+					&:hover {
+						background-color:#000;
+					}
+				}
+			}
+		}
+
+		.store-sales-section {
+
+			.title {
+				font-size:15px;
+				line-height:1;
+
+				[class*="btn-"]{
+					display:none;
+				}
+
+				&.hidden-xs {
+					margin-bottom:40px;
+				}
+			}
+
+			.store-sales-chart {
+				padding-top:30px;
+			}
+
+			.store-sales-chart {
+				padding-top:0;
+
+				.chart-container {
+					padding-bottom:40px;
+				}
+			}
+
+			.store-sales {
+				padding-top:0;
+				border:none;
+				padding-bottom:0;
+
+				.sales-listing {
+					margin:0;
+					ul {
+						li {
+							.sales-count {
+								font-size: 20px;
+							}
+						}
+					}
+				}
+			}
+
+			.store-sales-total {
+
+				padding-top:40px;
+				border-bottom:0;
+
+				h2 {
+					font-weight:normal;
+					font-size:18px;
+				}
+			}
+
+			.store-best-seller-wrapper {
+				padding-top: 30px;
+				border-top: solid 4px #EFEFEF;
+
+				.store-best-seller {
+					padding-top:0;
+					padding-bottom:0;
+					border:none;
+
+					ul {
+						padding-top:30px;
+						padding-bottom:40px;
+					}
+
+					.btn-red {
+						display: block;
+						height: 38px;
+						background: #FF6C61;
+						-webkit-border-radius: 10px;
+						-moz-border-radius: 10px;
+						-ms-border-radius: 10px;
+						border-radius: 10px;
+						cursor: pointer;
+						text-align: center;
+						line-height: 30px;
+						font-family: "Zona Pro";
+						font-size: 16px;
+						color: #FFF;
+						text-transform: uppercase;
+						letter-spacing: 0.1em;
+						cursor: pointer;
+						padding-left: 23px;
+						padding-right: 23px;
+						margin: 0 auto;
+						max-width: 310px;
+						margin-bottom:100px;
+					}
+				}
+			}
+		}
+	
+		.store-agreement-section {
+			padding-top:0;
+			border-top:0;
+		}
+	}
+
+	.store-order-search-history-section {
+
+		#search-wrap {
+
+			display:block;
+			opacity:1;
+			padding-bottom:55px;
+
+			.search-wrap-outer {
+				height:auto;
+				max-width:320px;
+
+				.search-inner {
+
+					padding:25px 0;
+
+					img {
+						margin-bottom:35px;
+					}
+
+					.search-form {
+						.help-text {
+							font-size:15px;
+						}
+					}
+				}
+			}
+		}
+
+		#order-history-wrap {
+			display:none;
+		}
+
+		.order-history-desktop {
+			border-top: solid 4px #E5E5E5;
+			padding-top:35px;
+			padding-bottom:35px;
+
+			h3 {
+				margin-bottom:0;
+			}
+
+			ul {
+
+				list-style:none;
+				padding:0;
+				margin:0;
+
+				li {
+				    padding: 15px;
+				    border-bottom: solid 1px #E5E5E5;
+				    overflow: hidden;
+
+				    .order-summary-link {
+					    width: 10px;
+					    height: 10px;
+					    display: inline-block;
+					    padding: 0;
+					    background: url(../../images/child-trigger.png) no-repeat center center;
+					    vertical-align: middle;
+					}
+
+					.order-info {
+					    width: 200px;
+					    display: inline-block;
+					    vertical-align: middle;
+
+					    span {
+							display: block;
+							line-height: 1.3;
+
+							&.orderId{
+								font-size: 13.5px;
+								font-family: "Zona Pro";
+								letter-spacing: 0.2em;
+							}
+
+							&.orderCount {
+								font-size: 16px;
+								color: #686868;
+							}
+
+							&.orderCost {
+								font-size: 18.5px;
+								color: #2D2D2D;
+							}
+					    }
+					}
+
+					.order-thumb {
+					    width: -webkit-calc(100% - 220px);
+					    width: calc(100% - 220px);
+					    display: inline-block;
+					    vertical-align: middle;
+					    overflow: hidden;
+
+					    span {
+					    	width:19%;
+					    	text-align:center;
+					    	display:inline-block;
+
+					    	img {
+					    		max-width:57px;
+					    	}
+					    }
+					}
+				}
+			}
+		}
+
+		ul.nav-tabs {
+			display:none;
+		}
+
+		&.store-order-all-history-section {
+			.order-history-desktop {
+				padding:0 15px;
+				border-top:0;
+			}
+		}
+	}
+
+	.sales-order-history-section,
+	.sales-order-listing-section {
+		background:transparent;
+		min-height: -webkit-calc(100vh - 117px);
+		min-height: calc(100vh - 117px);
+
+		.order-header {
+			padding-bottom:0;
+			border-bottom:0;
+
+			h3 {
+				margin-bottom:0;
+			}
+		}
+	}
+
+	.siteFooter {
+		display:block !important;
+		overflow: hidden;
+	}
+
+	.product-list-group {
+		ul {
+			li {
+			    width:48%;
+			    float:left;
+			    margin-right:4%;
+
+			    &:nth-child(even){
+			    	margin-right:0;
+			    }
+
+			    &:nth-last-child(-n+2){
+			    	border-bottom:none;
+			    }
+
+			    .product-modify {
+			    	width: 68px;
+
+			    	button[class*="prod-"] {
+			    		.prod-remove{
+				    		margin-right: 7px;
+				    	}
+
+				    	.prod-add {
+				    		margin-left: 7px;
+				    	}
+			    	}
+			    }
+
+			    .product-info {
+				    width: calc(100% - 160px);
+				    width: -webkit-calc(100% - 150px);
+				    position:relative;
+
+				    & > a:not(.product-price):hover {
+				    	text-decoration:underline;
+				    }
+
+				    .product-quantity {
+				    	font-size:16px !important;
+				    }
+
+				    .product-price {
+				    	top:50%;
+				    	@include transform(translateY(-56%));
+				    	position:absolute;
+				    	right:0;
+				    }
+
+				    .product-description {
+						margin: 0;
+					    line-height: 1.2;
+					    font-size: 12px;
+					    color: #686868;
+					}
+				}
+			}
+
+			&:after {
+				content:"";
+				clear:both;
+				display:block;
+			}
+		}
+
+		.total-price-wrap {
+			border:none;
+			clear:both;
+			border-top:solid 1px #E5E5E5;
+		}
+	}
+
+	.store-profile-edit-section {
+		position:relative;
+
+		.store-description {
+			.bg-store-image {
+				margin-top:55px;
+			}
+		}
+
+		&:not(.customer-content-section) {
+			.order-header {
+				padding:0;
+				margin:0;
+				border:0;
+			}
+		}
+	}
+
+	.sales-rider-confirmation-section {
+
+		.order-header {
+			padding-bottom: 0;
+			border-bottom: 0;
+		}
+
+		.title {
+			margin-bottom:0;
+		}
+
+		.rider-conf-wrap {
+			height: -webkit-calc(100vh - 207px);
+			height: calc(100vh - 217px);
+			max-width:320px;
+		}
+	}
+
+	.store-order-transaction-complete-section {
+
+		.transaction-complete {
+			height: -webkit-calc(100vh - 156px);
+    		height: calc(100vh - 156px);
+    	}
+
+		.order-id{
+			border-bottom:0;
+		}
+	}
+
+	.store-product-section {
+		background: #F4F4F4;
+
+		#content {
+			background-color:#FFF;
+		}
+
+		ul.product-group {
+
+			& > li > a {
+				border-bottom:solid 1px #EFEFEF;
+			}
+
+			ul {
+				max-width:960px;
+				margin:0 auto;
+
+				li {
+					width:48%;
+					border:none;
+					display:inline-block;
+					vertical-align:top;
+					border-bottom:solid 1px #EFEFEF;
+
+					&:nth-child(even){
+						margin-left:3.5%;
+					}
+
+					&:nth-last-child(-n+2){
+						border-bottom:0;
+					}
+
+					.product-info {
+						width: calc(86% - 195px);
+						width: -webkit-calc(86% - 195px);
+					}
+
+					a.product-description-link {
+						font-size: 14px;
+						line-height: 1.2;
+						width:100px;
+
+						span {
+							font-size:15px;
+						}
+					}
+				}
+			}
+		}
+
+		ul.product_list {
+
+			max-width:960px;
+			margin:0 auto;
+
+			& > li > a:not(.product-description-link) {
+				border-bottom:solid 1px #EFEFEF;
+			}
+
+			li {
+				width:48%;
+				border:none;
+				display:inline-block;
+				vertical-align:top;
+				border-bottom:solid 1px #EFEFEF;
+
+				&:nth-child(even){
+					margin-left:3.5%;
+				}
+
+				&:nth-last-child(-n+2){
+					border-bottom:0;
+				}
+
+				.product-info {
+					width: calc(86% - 195px);
+					width: -webkit-calc(86% - 195px);
+				}
+
+				a.product-description-link {
+					font-size: 14px;
+					line-height: 1.2;
+					width:100px;
+
+					span {
+						font-size:15px;
+					}
+				}
+			}
+		}
+	}
+
+	.sales-product-description-section {
+		margin-top:0;
+
+		.product-image {
+			height:360px;
+
+			.product-image-inner {
+
+				img {
+					max-height:230px;
+				}
+			}
+
+			&.visible-xs{
+				display:none !important;
+			}
+		}
+
+		.add-basket-prod-info {
+			margin-top:20px;
+
+			.stickyfooter {
+				margin-top:15px;
+				text-align:right;
+
+				button,a,input[type="submit"]{
+					width:auto;
+					margin:0;
+					text-align:center;
+					display:inline-block;
+				}
+			}
+
+			.product-name {
+				font-size:16px;
+				font-family:"Zona Pro";
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+			}
+
+			.product-quantity {
+			    color: #686868;
+			    font-size: 14px;
+			    margin-bottom: 20px;
+			}
+		}
+
+		.tab-content {
+			position:relative;
+
+			.product-info {
+				font-size:16px;
+				max-width:100%;
+				margin:0 auto;
+
+				& > a:not(.product-price):hover {
+			    	text-decoration:underline;
+			    }
+
+				.product-description {
+					margin: 0;
+				    line-height: 1.2;
+				    font-size: 12px;
+				    color: #686868;
+				}
+			}
+
+			.product-measures {
+			    padding: 0;
+			    margin: 0;
+			    list-style: none;
+			    max-width: 100%;
+			    margin: 0 auto;
+
+			    & + .product-info {
+			    	max-width: 100%;
+			    }
+			}
+		}
+
+		.stickyfooter {
+			margin-bottom:50px;
+		}
+
+		.btn-desktop-back {
+			position:absolute;
+			top:15px;
+			left:15px;
+		}
+	}
+
+	.section-store-bank-details {
+		
+		.order-header {
+			padding:0;
+			border:0;
+			.btn-red {
+				font-size:12px;
+			}
+		}
+
+		.btn-red {
+			font-size:16px;
+		}
+		.center {
+			text-align:center;
+		}
+
+		#bank_details {
+			border:none;
+			padding:0;
+		}
+	}
+
+	.store-wallet-section {
+		.btn-red {
+			font-size:16px;
+		}
+	}
+
+	.store-single-layout {
+		border-top: 0 none;
+	    padding-top: 0;
+
+	    & > .order-info {
+	    	border-top: 4px solid #efefef;
+    		padding-top: 25px;
+	    }
+	}
+
+	.availability-section {
+		padding-left:15px;
+		padding-right:15px;
+		padding-bottom:50px;
+
+		.order-header {
+			padding:0;
+			border:0;
+		}
+
+		.time-heading {
+			text-align: right;
+			padding-right: 15px;
+			font-size:12px;
+			color:#686868;
+		    max-width: 650px;
+			margin: 0 auto;
+
+			span {
+				width:33px;
+				text-align:center;
+				display:inline-block;
+			}
+		}
+	}
+
+	.store-address-edit-section {
+
+		padding-top:25px;
+
+		#form-store-address-edit {
+			[class*="col-"]{
+				padding-left:30px;
+				padding-right:30px;
+			}
+		}
+	}
+
+	.store-payout-section {
+		.container {
+			padding:0 15px;
+		}
+
+		.order-header {
+			padding: 0;
+			border: 0;
+		}
+	}
+
+	.days-selector {
+		margin-top:0;
+	}
+
+	.sales-order-listing-section{
+		.product-list-group {
+			ul {
+				li {
+					.product-info {
+						width: calc(100% - 210px);
+						width: -webkit-calc(100% - 210px);
+						position: relative;
+						padding-right: 60px;
+					}
+
+					.product-modify {
+						width:90px;
+
+						.product-quan {
+							min-height: 32px;
+							line-height: 26px;
+							padding: 3px;
+							max-width: 48px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#add-store {
+		.modal-body {
+			padding-bottom:15px;
+		}	
+	}
+}
